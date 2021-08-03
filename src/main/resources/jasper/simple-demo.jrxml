@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="simple-demo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5dd3de67-fd0a-414a-ba63-08e8a1715ff1">
+	<style name="BaseStyle" isDefault="true" radius="0" hTextAlign="Center" vTextAlign="Middle" pattern="" isBlankWhenNull="true" fontName="標楷體" fontSize="12">
+		<box>
+			<pen lineWidth="0.5"/>
+		</box>
+	</style>
+	<parameter name="exportDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="姓名" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="職稱" class="java.lang.String">
+		<fieldDescription><![CDATA[title]]></fieldDescription>
+	</field>
+	<field name="備註" class="java.lang.String">
+		<fieldDescription><![CDATA[note]]></fieldDescription>
+	</field>
+	<field name="電話" class="java.lang.String">
+		<fieldDescription><![CDATA[tel]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="8eaef979-6d91-43b1-b253-2d917f966873"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[JasperReport Demo]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="35" uuid="cebcff68-833f-4b94-8d0d-49245a9dddb0"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA["匯出日期：" + $P{exportDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="40" uuid="282a200c-e421-4c49-8c8a-27ca3b382171">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[序號]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="40" uuid="7ee88dd3-ece0-47c8-97d6-31f5b99211ee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="40" uuid="522a4340-d971-48a2-8bae-f55a4b571651">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[職稱]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="180" height="40" uuid="6cb3dbee-8051-44fd-a64f-aeb8fe76b925">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[備註]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="95" height="40" uuid="472b1433-653d-45c0-b8eb-8a0948b51e99">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[電話]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="40" uuid="1b45895b-4272-406d-8ed2-6fc0797d4f29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="40" uuid="d85b44a5-11cf-4013-9936-1b5e60db325a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{姓名}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="40" uuid="4939117e-e266-417f-a9e5-d86abe759987">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{職稱}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="180" height="40" uuid="1f1d5af1-e90b-4654-83b5-5fb99400f3c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{備註}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="95" height="40" uuid="c4713f5d-4b37-47a5-9def-72d33670d808">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{電話}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
