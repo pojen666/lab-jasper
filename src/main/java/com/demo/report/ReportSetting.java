@@ -44,7 +44,7 @@ public class ReportSetting {
     private JRDataSource dataSource;
 
     /**
-     * Sheet Name，如果格式為xls、ods可指定
+     * Sheet Name，應用在xls的sheet name和所有格式的預設檔名
      */
     private String sheetName;
 
